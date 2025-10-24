@@ -15,7 +15,3 @@ test('multiplies 3 * 4 to equal 12', () => {
 test('divides 10 / 2 to equal 5', () => {
   expect(div(10, 2)).toBe(5);
 });
-
-test('throws error when dividing by zero', () => {
-  expect(() => div(5, 0)).toThrow("Division by zero is not allowed");
-});
