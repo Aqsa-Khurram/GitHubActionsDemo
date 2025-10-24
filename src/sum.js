@@ -18,4 +18,11 @@ function div(a, b) {
   return a / b;
 }
 
-module.exports = { sum, sub, mul, div };
+function modulus(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot take modulus by zero');
+  }
+  return a % b;
+}
+
+module.exports = { sum, sub, mul, div, modulus};
