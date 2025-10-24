@@ -1,28 +1,29 @@
-// calculator.js
-function sum(a, b) {
-  return a + b;
+// calcEngine.js
+
+function addition(x, y) {
+  return x + y;
 }
 
-function sub(a, b) {
-  return a - b;
+function subtraction(x, y) {
+  return x - y;
 }
 
-function mul(a, b) {
-  return a * b;
+function multiplication(x, y) {
+  return x * y;
 }
 
-function div(a, b) {
-  if (b === 0) {
-    throw new Error("Division by zero is not allowed");
+function division(x, y) {
+  if (y === 0) {
+    throw new Error("Division by zero is not possible");
   }
-  return a / b;
+  return x / y;
 }
 
-function modulus(a, b) {
-  if (b === 0) {
-    throw new Error("Cannot take modulus by zero");
+function remainder(x, y) {
+  if (y === 0) {
+    throw new Error("Cannot compute remainder with zero divisor");
   }
-  return a % b;
+  return x % y;
 }
 
-module.exports = { sum, sub, mul, div, modulus };
+module.exports = { addition, subtraction, multiplication, division, remainder };
