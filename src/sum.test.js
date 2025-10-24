@@ -1,4 +1,4 @@
-// calcEngine.test.js
+
 const request = require('supertest');
 const app = require('./app');
 const calc = require('./sum');
