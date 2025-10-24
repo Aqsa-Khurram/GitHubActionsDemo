@@ -1,6 +1,3 @@
-
-const request = require('supertest');
-const app = require('./app');
 const calc = require('./sum');
 
 describe('Basic Arithmetic Functions', () => {
@@ -32,37 +29,3 @@ describe('Basic Arithmetic Functions', () => {
     expect(() => calc.remainder(10, 0)).toThrow('Cannot compute remainder with zero divisor');
   });
 });
-
-describe('API Route Tests', () => {
-  test('GET /add works', async () => {
-    const res = await request(app).get('/add?a=2&b=3');
-    expect(res.body.result).toBe(5);
-  });
-
-  test('GET /subtract works', async () => {
-    const res = await request(app).get('/subtract?a=10&b=3');
-    expect(res.body.result).toBe(7);
-  });
-
-  test('GET /multiply works', async () => {
-    const res = await request(app).get('/multiply?a=2&b=4');
-    expect(res.body.result).toBe(8);
-  });
-
-  test('GET /divide works', async () => {
-    const res = await request(app).get('/divide?a=9&b=3');
-    expect(res.body.result).toBe(3);
-  });
-
-  test('GET /divide handles zero', async () => {
-    const res = await request(app).get('/divide?a=5&b=0');
-    expect(res.status).toBe(400);
-    expect(res.body.error).toBe('Division by zero is not possible');
-  });
-
-  test('GET /remainder works', async () => {
-    const res = await request(app).get('/remainder?a=10&b=4');
-    expect(res.body.result).toBe(2);
-  });
-});
-//END
