@@ -25,5 +25,5 @@ function remainder(x, y) {
   }
   return x % y;
 }
-
+//EXPORT
 module.exports = { addition, subtraction, multiplication, division, remainder };
