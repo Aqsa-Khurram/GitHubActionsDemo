@@ -1,4 +1,4 @@
-// functions
+// calculator.js
 function sum(a, b) {
   return a + b;
 }
@@ -20,9 +20,9 @@ function div(a, b) {
 
 function modulus(a, b) {
   if (b === 0) {
-    throw new Error('Cannot take modulus by zero');
+    throw new Error("Cannot take modulus by zero");
   }
   return a % b;
 }
 
-module.exports = { sum, sub, mul, div, modulus};
+module.exports = { sum, sub, mul, div, modulus };
