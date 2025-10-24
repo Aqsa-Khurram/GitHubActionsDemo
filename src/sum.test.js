@@ -1,6 +1,6 @@
 // calcEngine.test.js
 const request = require('supertest');
-const app = require('./serverApp');
+const app = require('./app');
 const calc = require('./sum');
 
 describe('Basic Arithmetic Functions', () => {
